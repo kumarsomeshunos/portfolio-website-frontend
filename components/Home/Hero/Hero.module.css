@@ -1,0 +1,167 @@
+.main {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    min-height: 90vh;
+}
+
+.sectionMD {
+    max-width: none;
+}
+
+.paraGreetings {
+    font-size: 500%;
+    font-weight: 100;
+}
+
+.h1Name {
+    font-size: 600%;
+    font-weight: 500;
+    padding: 1.5rem 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 100%;
+}
+
+.dangerousMD {
+    line-height: var(--para-line-height);
+}
+
+.dangerousMD p {
+    margin: 0 0 1rem 0;
+}
+
+.divButtons {
+    margin: 3rem 0;
+}
+
+.image {
+    /* border-radius: 50%; */
+    width: 25rem;
+    height: auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media (max-width: 330px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .sectionMD {
+        max-width: none;
+    }
+
+    .paraGreetings {
+        font-size: 200%;
+    }
+
+    .h1Name {
+        font-size: 300%;
+        font-weight: 500;
+        padding: 1.5rem 0;
+    }
+
+    .image {
+        display: none;
+    }
+}
+
+@media (min-width: 331px) and (max-width: 575px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .sectionMD {
+        max-width: none;
+    }
+
+    .paraGreetings {
+        font-size: 400%;
+    }
+
+    .h1Name {
+        font-size: 500%;
+        font-weight: 500;
+        padding: 1.5rem 0;
+    }
+
+    .image {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .sectionMD {
+        max-width: 540px;
+    }
+
+    .image {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .sectionMD {
+        max-width: 540px;
+    }
+
+    .image {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .sectionMD {
+        /* decreased by 100 */
+        max-width: 440px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .sectionMD {
+        /* decreased by 100 */
+        max-width: 440px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1150px;
+    }
+
+    .sectionMD {
+        /* decreased by 50 */
+        max-width: 670px;
+    }
+}

@@ -1,0 +1,79 @@
+.main {
+    color: var(--main-text-color);
+    background-color: var(--card-background-color);
+    padding: 1rem;
+    display: flex;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    break-inside: avoid;
+    margin: 0 0 1rem 0;
+}
+
+.main:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: var(--card-box-shadow);
+    transform: translateY(-0.2rem);
+}
+
+.title {
+    font-size: 150%;
+    font-weight: 500;
+    padding: 0 0 0.5rem 0;
+}
+
+.divTime {
+    margin: 1rem 0;
+}
+
+.time {
+    color: #9C9C9C;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0.5rem 0;
+}
+
+.tag {
+    background-color: #434343;
+    color: white;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.1rem;
+    box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.image {
+    margin-right: 1.5rem;
+}
+
+.image img {
+    object-fit: cover;
+    height: 100%;
+    box-shadow: var(--image-box-shadow);
+    border-radius: 10px;
+}
+
+.description {
+    line-height: var(--para-line-height);
+    margin: 0.5rem 0 1rem 0
+}
+
+@media (max-width: 575px) {
+    .main {
+        flex-wrap: wrap;
+    }
+
+    .image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .image img {
+        width: 100%;
+    }
+}

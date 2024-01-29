@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 1rem;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}

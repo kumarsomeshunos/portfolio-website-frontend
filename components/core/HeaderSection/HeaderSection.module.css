@@ -1,0 +1,24 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.heading {
+    text-align: center;
+    font-size: 300%;
+    font-weight: 600;
+    padding: 3rem 0;
+    margin: auto;
+}
+
+.description {
+    margin: auto;
+    padding: 0 0 2rem 0;
+}

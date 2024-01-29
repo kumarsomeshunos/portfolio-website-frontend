@@ -1,0 +1,157 @@
+.main {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    padding: 1.5rem 0;
+}
+
+.sectionWrapper {
+    background-color: rgba(31, 31, 31, 0.85);
+    padding: 3rem 5rem;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formGroup {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup>input {
+    width: 25rem;
+    height: 2.5rem;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    caret-color: white;
+    padding: 0 1rem;
+    color: white;
+}
+
+.formGroup>input:focus {
+    outline: none;
+    border: none;
+}
+
+.formGroup>textarea {
+    width: 25rem;
+    height: 10rem;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    caret-color: white;
+    padding: 0 1rem;
+    color: white;
+}
+
+.formGroup>textarea:focus {
+    outline: none;
+    border: none;
+}
+
+.label {
+    margin: 1rem 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media (max-width: 360px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .sectionWrapper {
+        padding: 1rem;
+    }
+
+    .formGroup>input {
+        width: 15rem;
+    }
+
+    .formGroup>textarea {
+        width: 15rem;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 575px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .sectionWrapper {
+        padding: 1rem;
+    }
+
+    .formGroup>input {
+        width: 20rem;
+    }
+
+    .formGroup>textarea {
+        width: 20rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .sectionWrapper {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .sectionWrapper {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .sectionWrapper {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .sectionWrapper {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1150px;
+    }
+
+    .sectionWrapper {
+        padding: 2rem 3rem;
+    }
+}

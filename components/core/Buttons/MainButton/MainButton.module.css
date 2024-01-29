@@ -1,0 +1,14 @@
+.main {
+    border-bottom: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.main:hover {
+    background-color: #1A9FEA !important;
+    box-shadow: none !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.main::after {
+    width: auto;
+}
