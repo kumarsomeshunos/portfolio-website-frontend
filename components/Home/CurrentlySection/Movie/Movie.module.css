@@ -255,10 +255,6 @@
     .sectionMain>img {
         height: 55rem;
     }
-
-    .sectionPartOne>img {
-        margin-left: 0rem;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

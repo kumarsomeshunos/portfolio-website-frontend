@@ -20,7 +20,7 @@ const fetchBaseData = async () => {
 
 const fetchProjectData = async () => {
   const projectData = await fetch(
-    "https://api.kumarsomesh.in/api/portfolio/projects?limit=6",
+    "https://api.kumarsomesh.in/api/portfolio/projects?sortByDate=des&limit=100",
     { next: { revalidate: false | 0 | 1 } }
   );
   const projectDataJson = await projectData.json();

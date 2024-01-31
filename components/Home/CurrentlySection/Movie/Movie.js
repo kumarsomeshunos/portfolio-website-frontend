@@ -1,6 +1,7 @@
 import styles from "./Movie.module.css";
 import Image from "next/image";
 import MainButton from "@/components/core/Buttons/MainButton/MainButton";
+import HeaderSection from "@/components/core/HeaderSection/HeaderSection";
 
 function convertSecondsToTime(milliseconds) {
   const seconds = Math.floor(milliseconds / 1000);
@@ -12,6 +13,12 @@ function convertSecondsToTime(milliseconds) {
 const Movie = ({ plexData }) => {
   return (
     <section className={styles.sectionMain}>
+    {/* <HeaderSection
+        heading={"PROJECTS"}
+        description={
+          "These are some projects made with love by me. -- Somesh Kumar"
+        }
+      /> */}
       <Image
         src={
           plexData.backdropPath.includes("undefined")

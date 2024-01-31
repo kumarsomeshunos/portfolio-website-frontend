@@ -191,10 +191,6 @@
         justify-content: center;
         align-items: center;
     }
-
-    .sectionMain>img {
-        height: 55rem;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

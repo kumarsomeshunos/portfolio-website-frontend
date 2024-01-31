@@ -19,8 +19,18 @@ const fetchBaseData = async () => {
   return baseDataJson;
 };
 
+const fetchUpdateData = async () => {
+  const updateData = await fetch(
+    "https://api.kumarsomesh.in/api/portfolio/projects/65b9aa109321fbd2b545e11d",
+    { next: { revalidate: false | 0 | 1 } }
+  );
+  const updateDataJson = await updateData.json();
+  return updateDataJson;
+};
+
 export default async function Updates() {
   const baseData = await fetchBaseData();
+  const updateData = await fetchUpdateData();
   return (
     <main>
       <Navbar navbarLinks={baseData.data[0].navbarLinks} />
@@ -30,7 +40,7 @@ export default async function Updates() {
           "These are some projects made with love by me. -- Somesh Kumar"
         }
       />
-      <UpdatesSection />
+      <UpdatesSection descriptionMD={updateData.data.descriptionMD} />
       <Footer />
       <End endComment={baseData.data[0].endComment} />
     </main>
