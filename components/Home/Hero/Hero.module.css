@@ -59,7 +59,7 @@
 
 @media (max-width: 330px) {
     .container {
-        max-width: 95%;
+        max-width: 85%;
     }
 
     .sectionMD {
@@ -83,7 +83,7 @@
 
 @media (min-width: 331px) and (max-width: 575px) {
     .container {
-        max-width: 95%;
+        max-width: 85%;
     }
 
     .sectionMD {

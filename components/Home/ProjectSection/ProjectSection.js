@@ -1,8 +1,7 @@
 import styles from "./ProjectSection.module.css";
-import { Ubuntu } from "next/font/google";
-const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400"] });
 import ProjectCard from "@/components/core/ProjectCard/ProjectCard";
 import MainButton from "@/components/core/Buttons/MainButton/MainButton";
+import HeaderSection from "@/components/core/HeaderSection/HeaderSection";
 
 export default function ProjectSection({
   sectionOneHeading,
@@ -18,9 +17,12 @@ export default function ProjectSection({
       //     "url('https://wallpapers.com/images/hd/dark-background-b59iy2towqy5yrgb.jpg')",
       // }}
     >
-      <h2 className={`${styles.heading} ${ubuntu.className}`}>
-        {sectionOneHeading.toUpperCase()}
-      </h2>
+      <HeaderSection
+        heading={"PROJECTS"}
+        description={
+          "These are some projects made with love by me. -- Somesh Kumar"
+        }
+      />
       <div className={`${styles.container} ${styles.wrapper}`}>
         <div className={styles.divCards}>
           {projects.map((project) => {

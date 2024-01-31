@@ -1,8 +1,7 @@
 import styles from "./BlogSection.module.css";
-import { Ubuntu } from "next/font/google";
-const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400"] });
 import BlogCard from "@/components/core/BlogCard/BlogCard";
 import MainButton from "@/components/core/Buttons/MainButton/MainButton";
+import HeaderSection from "@/components/core/HeaderSection/HeaderSection";
 
 export default function BlogSection({
   sectionTwoHeading,
@@ -18,9 +17,12 @@ export default function BlogSection({
       //     "url('https://wallpapers.com/images/hd/dark-background-b59iy2towqy5yrgb.jpg')",
       // }}
     >
-      <h2 className={`${styles.heading} ${ubuntu.className}`}>
-        {sectionTwoHeading.toUpperCase()}
-      </h2>
+      <HeaderSection
+        heading={"BLOGS"}
+        description={
+          "These are some projects made with love by me. -- Somesh Kumar"
+        }
+      />
       {/* <p className={styles.subHeading}>{sectionTwoSubHeading}</p> */}
       <div className={`${styles.container} ${styles.wrapper}`}>
         <div className={styles.divCards}>

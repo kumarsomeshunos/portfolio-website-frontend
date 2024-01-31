@@ -136,7 +136,7 @@
 
 @media (max-width: 575px) {
     .container {
-        max-width: 95%;
+        max-width: 85%;
     }
 
     .sectionWrapper {
@@ -162,6 +162,10 @@
 
     .sectionMain>img {
         height: 65rem;
+    }
+
+    .sectionPartOne>img {
+        margin-left: 0rem;
     }
 }
 

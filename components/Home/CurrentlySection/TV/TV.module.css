@@ -201,7 +201,7 @@
 
 @media (max-width: 575px) {
     .container {
-        max-width: 95%;
+        max-width: 85%;
     }
 
     .sectionWrapper {
@@ -227,6 +227,10 @@
 
     .sectionMain>img {
         height: 130vh;
+    }
+
+    .sectionPartOne>img {
+        margin-left: 0rem;
     }
 }
 
@@ -255,6 +259,10 @@
 
     .sectionMain>img {
         height: 90vh;
+    }
+
+    .sectionPartOne>img {
+        margin-left: 0rem;
     }
 }
 
