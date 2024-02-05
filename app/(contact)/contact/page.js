@@ -26,11 +26,11 @@ export default async function Contact() {
       <HeaderSection
         heading={"CONTACT"}
         description={
-          "These are some projects made with love by me. -- Somesh Kumar"
+          ""
         }
       />
       <ContactSection />
-      <Footer />
+      <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.data[0].endComment} />
     </main>
   );

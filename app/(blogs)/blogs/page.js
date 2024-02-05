@@ -37,7 +37,7 @@ export default async function Blogs() {
       <HeaderSection
         heading={"BLOGS"}
         description={
-          "These are some projects made with love by me. -- Somesh Kumar"
+          ""
         }
       />
       <BlogsSection
@@ -46,7 +46,7 @@ export default async function Blogs() {
         sectionTwoButtons={baseData.data[0].sectionTwoButtons}
         blogs={blogData.data}
       />
-      <Footer />
+      <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.data[0].endComment} />
     </main>
   );

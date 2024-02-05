@@ -18,10 +18,11 @@ export default function BlogSection({
       // }}
     >
       <HeaderSection
-        heading={"BLOGS"}
+        heading={sectionTwoHeading.toUpperCase()}
         description={
-          "These are some projects made with love by me. -- Somesh Kumar"
+          sectionTwoSubHeading
         }
+        backgroundColor={"transparent"}
       />
       {/* <p className={styles.subHeading}>{sectionTwoSubHeading}</p> */}
       <div className={`${styles.container} ${styles.wrapper}`}>

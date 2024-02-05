@@ -21,7 +21,7 @@ const fetchBaseData = async () => {
 
 const fetchUpdateData = async () => {
   const updateData = await fetch(
-    "https://api.kumarsomesh.in/api/portfolio/projects/65b9aa109321fbd2b545e11d",
+    "https://api.kumarsomesh.in/api/portfolio/updates/",
     { next: { revalidate: false | 0 | 1 } }
   );
   const updateDataJson = await updateData.json();
@@ -37,11 +37,11 @@ export default async function Updates() {
       <HeaderSection
         heading={"UPDATES"}
         description={
-          "These are some projects made with love by me. -- Somesh Kumar"
+          ""
         }
       />
-      <UpdatesSection descriptionMD={updateData.data.descriptionMD} />
-      <Footer />
+      <UpdatesSection title={updateData.data[0].title} postedOn={updateData.data[0].postedOn} version={updateData.data[0].version} descriptionMD={updateData.data[0].descriptionMD} />
+      <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.data[0].endComment} />
     </main>
   );

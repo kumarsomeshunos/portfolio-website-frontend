@@ -12,7 +12,7 @@ export const metadata = {
 const fetchBaseData = async () => {
   const baseData = await fetch(
     "https://api.kumarsomesh.in/api/portfolio/bases",
-    { next: { revalidate: true | 0 | 1 } }
+    { next: { revalidate: false | 0 | 1 } }
   );
   const baseDataJson = await baseData.json();
   return baseDataJson;
@@ -36,7 +36,7 @@ export default async function Projects() {
       <HeaderSection
         heading={"PROJECTS"}
         description={
-          "These are some projects made with love by me. -- Somesh Kumar"
+          ""
         }
       />
       <ProjectSection
@@ -45,7 +45,7 @@ export default async function Projects() {
         sectionOneButtons={baseData.data[0].sectionOneButtons}
         projects={projectData.data}
       />
-      <Footer />
+      <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.data[0].endComment} />
     </main>
   );

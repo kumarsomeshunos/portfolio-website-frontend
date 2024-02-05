@@ -1,7 +1,7 @@
 import styles from "./UpdatesSection.module.css";
 import UpdatesCard from "@/components/core/UpdatesCard/UpdatesCard";
 
-export default function UpdatesSection({ descriptionMD }) {
+export default function UpdatesSection({ title, postedOn, version, descriptionMD }) {
   return (
     <section
       className={styles.main}
@@ -11,7 +11,7 @@ export default function UpdatesSection({ descriptionMD }) {
       //   }}
     >
       <div className={`${styles.container} ${styles.wrapper}`}>
-        <UpdatesCard descriptionMD={descriptionMD} />
+        <UpdatesCard title={title} postedOn={postedOn} version={version} descriptionMD={descriptionMD} />
       </div>
     </section>
   );

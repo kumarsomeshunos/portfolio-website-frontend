@@ -11,6 +11,12 @@
     font-size: 110%;
 }
 
+.title {
+    font-size: 150%;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
 .description {
     margin-top: 1rem;
 }

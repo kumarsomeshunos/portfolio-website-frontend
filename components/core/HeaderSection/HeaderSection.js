@@ -2,7 +2,7 @@ import styles from "./HeaderSection.module.css";
 import { Ubuntu } from "next/font/google";
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400"] });
 
-export default function HeaderSection({ heading, description }) {
+export default function HeaderSection({ heading, description, backgroundColor }) {
   return (
     <section
       className={`${styles.main} ${ubuntu.className}`}
@@ -10,6 +10,9 @@ export default function HeaderSection({ heading, description }) {
       //     backgroundImage:
       //       "url('https://wallpapers.com/images/hd/dark-background-b59iy2towqy5yrgb.jpg')",
       //   }}
+      style={{
+        backgroundColor: backgroundColor || "rgba(0, 0, 0, 0.85)",
+      }}
     >
       <div className={styles.container}>
         <h2 className={styles.heading}>{heading}</h2>

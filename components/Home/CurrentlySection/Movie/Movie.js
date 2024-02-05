@@ -2,6 +2,7 @@ import styles from "./Movie.module.css";
 import Image from "next/image";
 import MainButton from "@/components/core/Buttons/MainButton/MainButton";
 import HeaderSection from "@/components/core/HeaderSection/HeaderSection";
+import Link from "next/link";
 
 function convertSecondsToTime(milliseconds) {
   const seconds = Math.floor(milliseconds / 1000);
@@ -100,10 +101,10 @@ const Movie = ({ plexData }) => {
           <div className={styles.sectionTwoInfo}>
             <p className={styles.dailyMuse}>Wanna see more of my daily muse?</p>
             <p className={styles.otherLinks}>
-              Recently read <span>Books</span> 📚
+              Recently read <Link href={"/"}><span>Books</span></Link> 📚 (WIP)
             </p>
             <p className={styles.otherLinks}>
-              Recently watched <span>Movies</span> 🎬
+              Recently watched <Link href={"/"}><span>TV Show</span></Link> 🎬 (WIP)
             </p>
           </div>
         </div>

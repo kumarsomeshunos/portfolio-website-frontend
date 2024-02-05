@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Song.module.css";
 import Image from "next/image";
 import MainButton from "@/components/core/Buttons/MainButton/MainButton";
+import Link from "next/link";
 
 const Song = ({ lastfmData }) => {
   return (
@@ -39,7 +40,7 @@ const Song = ({ lastfmData }) => {
               Well, you can check my playlist on <span>Spotify</span>
             </p>
             <MainButton
-              text="▶ Play"
+              text="▶ Play (WIP)"
               border="2px solid green"
               backgroundColor="transparent"
               color="black"
@@ -54,10 +55,10 @@ const Song = ({ lastfmData }) => {
           <div className={styles.sectionTwoInfo}>
             <p className={styles.dailyMuse}>Wanna see more of my daily muse?</p>
             <p className={styles.otherLinks}>
-              Recently read <span>Books</span> 📚
+              Recently read <Link href={"/"}><span>Books</span></Link> 📚 (WIP)
             </p>
             <p className={styles.otherLinks}>
-              Recently watched <span>Movies</span> 🎬
+              Recently watched <Link href={"/"}><span>Movies</span></Link> 🎬 (WIP)
             </p>
           </div>
         </div>

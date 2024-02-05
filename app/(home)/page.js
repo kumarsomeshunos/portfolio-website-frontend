@@ -14,7 +14,7 @@ export const metadata = {
 const fetchBaseData = async () => {
   const baseData = await fetch(
     "https://api.kumarsomesh.in/api/portfolio/bases",
-    { next: { revalidate: true | 0 | 1 } }
+    { next: { revalidate: false | 0 | 1 } }
   );
   const baseDataJson = await baseData.json();
   return baseDataJson;
@@ -69,7 +69,7 @@ export default async function Home() {
         lastfmData={baseData.lastfmData}
         plexData={baseData.plexData}
       />
-      <Footer />
+      <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.data[0].endComment} />
     </main>
   );

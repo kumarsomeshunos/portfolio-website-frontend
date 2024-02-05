@@ -18,10 +18,11 @@ export default function ProjectSection({
       // }}
     >
       <HeaderSection
-        heading={"PROJECTS"}
+        heading={sectionOneHeading.toUpperCase()}
         description={
-          "These are some projects made with love by me. -- Somesh Kumar"
+          sectionOneSubHeading
         }
+        backgroundColor={"transparent"}
       />
       <div className={`${styles.container} ${styles.wrapper}`}>
         <div className={styles.divCards}>

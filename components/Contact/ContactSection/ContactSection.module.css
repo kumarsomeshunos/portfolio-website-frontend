@@ -98,11 +98,11 @@
     }
 
     .formGroup>input {
-        width: 20rem;
+        width: 18rem;
     }
 
     .formGroup>textarea {
-        width: 20rem;
+        width: 18rem;
     }
 }
 
