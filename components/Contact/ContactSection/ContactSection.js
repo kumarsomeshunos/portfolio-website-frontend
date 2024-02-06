@@ -11,7 +11,7 @@ export default function ContactSection() {
     >
       <div className={`${styles.container} ${styles.wrapper}`}>
         <section className={styles.sectionWrapper}>
-          <form className={styles.form}>
+          <form className={styles.form} action="https://api.kumarsomesh.in/api/portfolio/contact" method="POST">
             <div className={styles.formGroup}>
               <label htmlFor="name" className={styles.label}>
                 Name
@@ -30,10 +30,11 @@ export default function ContactSection() {
               </label>
               <textarea id="message"></textarea>
             </div>
+            {/* <button type="submit">Send Message</button> */}
             <MainButton
               // key={sectionOneButton.key}
               text={"Send Message"}
-              href={"/"}
+              href={"https://api.kumarsomesh.in/api/portfolio/contact"}
               margin={"0"}
               boxShadow={"none"}
               border={"2px solid #1A9FEA"}

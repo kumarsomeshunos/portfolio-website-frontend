@@ -14,7 +14,7 @@ export default function BlogSection({ blogs }) {
     >
       <div className={`${styles.container} ${styles.wrapper}`}>
         <h2 className={styles.heading}>Featured Blog</h2>
-        <MainCard thumbnail={blogs[0].thumbnail} title={blogs[0].title} postedOn={blogs[0].postedOn} />
+        <MainCard thumbnail={blogs[0].featuredThumbnail ? blogs[0].featuredThumbnail : blogs[0].thumbnail} title={blogs[0].title} postedOn={blogs[0].postedOn} />
         <h2 className={styles.heading}>All Blogs</h2>
         <div className={styles.divProjects}>
           {blogs.map((blog) => {

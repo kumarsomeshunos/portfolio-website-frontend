@@ -15,7 +15,7 @@ export default function ProjectSection({ projects }) {
     >
       <div className={`${styles.container} ${styles.wrapper}`}>
         <h2 className={styles.heading}>Featured Project</h2>
-        <MainCard thumbnail={projects[0].thumbnail} title={projects[0].title} postedOn={projects[0].postedOn} />
+        <MainCard thumbnail={projects[0].featuredThumbnail ? projects[0].featuredThumbnail : projects[0].thumbnail} title={projects[0].title} postedOn={projects[0].postedOn} />
         <h2 className={styles.heading}>All Projects</h2>
         <div className={styles.divProjects}>
           {projects.map((project) => {

@@ -54,6 +54,7 @@
     caret-color: white;
     padding: 0 1rem;
     color: white;
+    resize: vertical;
 }
 
 .formGroup>textarea:focus {

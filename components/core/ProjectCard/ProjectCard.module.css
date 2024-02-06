@@ -29,6 +29,7 @@
     font-size: 130%;
     font-weight: 500;
     margin: 0.5rem 0;
+    line-height: var(--para-line-height);
 }
 
 .divInfo {
@@ -42,8 +43,12 @@
     color: #9C9C9C;
 }
 
-.status {
+.statusGreen {
     color: #0F0;
+}
+
+.statusRed {
+    color: orange;
 }
 
 .description {
@@ -69,4 +74,8 @@
     height: auto;
     box-shadow: var(--image-box-shadow);
     border-radius: 10px;
+}
+
+.remover {
+    padding: -1rem 0 0 0;
 }

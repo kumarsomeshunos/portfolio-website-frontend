@@ -18,10 +18,9 @@ export default function Navbar({ navbarLinks }) {
       <div className={`${styles.container} ${styles.wrapper}`}>
         <span className={`${styles.logo} ${ubuntu.className}`}>
           <Link href="/">Somesh Kumar</Link>
-          <Link href="/updates" className={styles.version}>
-            {" "}
-            MK-V
-          </Link>
+          <span className={styles.version}>
+          &nbsp;&nbsp;&nbsp;MK-V
+          </span>
         </span>
         <ul className={styles.ul}>
           {navbarLinks.map((navbarLink) => {
