@@ -40,7 +40,7 @@ const Song = ({ lastfmData }) => {
               Well, you can check my playlist on <span>Spotify</span>
             </p>
             <MainButton
-              text="▶ Play (WIP)"
+              text="▶ Listen on Spotify [WIP]"
               border="2px solid green"
               backgroundColor="transparent"
               color="black"
@@ -55,10 +55,10 @@ const Song = ({ lastfmData }) => {
           <div className={styles.sectionTwoInfo}>
             <p className={styles.dailyMuse}>Wanna see more of my daily muse?</p>
             <p className={styles.otherLinks}>
-              Recently read <Link href={"/"}><span>Books</span></Link> 📚 (WIP)
+              Recently read <Link href={"/"}><span>Books</span></Link> 📚 [WIP]
             </p>
             <p className={styles.otherLinks}>
-              Recently watched <Link href={"/"}><span>Movies</span></Link> 🎬 (WIP)
+              Recently watched <Link href={"/"}><span>Movies</span></Link> 🎬 [WIP]
             </p>
           </div>
         </div>

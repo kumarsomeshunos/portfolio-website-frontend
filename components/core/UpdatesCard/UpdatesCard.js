@@ -7,7 +7,7 @@ export default async function UpdatesCard({ title, postedOn, version, descriptio
   const contentHtml = processedContent.toString();
   return (
     <div className={styles.main}>
-      <time className={styles.time}>{postedOn}</time>
+      <time className={styles.time} dateTime={postedOn.substring(0, 10)}>{postedOn.substring(0, 10)}</time>
       <h2 className={styles.title}>MK-{version} &bull; {title}</h2>
       <div
         className={`${styles.dangerousMD} ${styles.description}`}

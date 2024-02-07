@@ -115,10 +115,10 @@ const TV = ({ plexData }) => {
           <div className={styles.sectionTwoInfo}>
             <p className={styles.dailyMuse}>Wanna see more of my daily muse?</p>
             <p className={styles.otherLinks}>
-              Recently read <Link href={"/"}><span>Books</span></Link> 📚 (WIP)
+              Recently read <Link href={"/"}><span>Books</span></Link> 📚 [WIP]
             </p>
             <p className={styles.otherLinks}>
-              Recently watched <Link href={"/"}><span>Movies</span></Link> 🎬 (WIP)
+              Recently watched <Link href={"/"}><span>Movies</span></Link> 🎬 [WIP]
             </p>
           </div>
         </div>

@@ -25,8 +25,8 @@ export default function BlogCard({
         <h3 className={styles.title}>{title}</h3>
         <hr />
         <div className={styles.divTime}>
-          <time className={styles.time} dateTime="2024-01-10">
-            {postedOn}
+          <time className={styles.time} dateTime={postedOn.substring(0, 10)}>
+            {postedOn.substring(0, 10)}
           </time>
         </div>
         <div className={styles.tags}>
@@ -43,7 +43,7 @@ export default function BlogCard({
           key={
             Math.random().toString(36).substring(7) + Date.now().toString(36)
           }
-          text={"Read More"}
+          text={"Read More [WIP]"}
           border="none"
           boxShadow="none"
           margin="0 0.5rem 0.5rem 0"

@@ -16,24 +16,24 @@ export default function ContactSection() {
               <label htmlFor="name" className={styles.label}>
                 Name
               </label>
-              <input type="text" id="name" />
+              <input type="text" name="name" id="name" />
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="email" className={styles.label}>
                 Email
               </label>
-              <input type="email" id="email" />
+              <input type="email" name="email" id="email" />
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="message" className={styles.label}>
                 Message
               </label>
-              <textarea id="message"></textarea>
+              <textarea id="message" name="message"></textarea>
             </div>
-            {/* <button type="submit">Send Message</button> */}
+            <button type="submit">Send Message [ BETA ]</button>
             <MainButton
               // key={sectionOneButton.key}
-              text={"Send Message"}
+              text={"Send Message [ ALPHA ]"}
               href={"https://api.kumarsomesh.in/api/portfolio/contact"}
               margin={"0"}
               boxShadow={"none"}

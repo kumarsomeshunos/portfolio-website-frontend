@@ -17,8 +17,8 @@ export default function ProjectCard({
         <h3 className={styles.title}>{title}</h3>
         <hr />
         <div className={styles.divInfo}>
-          <time className={styles.time} dateTime="2024-01-10">
-            {postedOn}
+          <time className={styles.time} dateTime={postedOn.substring(0, 10)}>
+            {postedOn.substring(0, 10)}
           </time>
           {status.toLowerCase() == "completed" ? (
             <span className={styles.statusGreen}>{status}</span>

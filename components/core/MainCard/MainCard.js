@@ -11,7 +11,7 @@ export default function MainCard({ thumbnail, title, postedOn }) {
     >
       <div className={styles.divInfo}>
         <p className={styles.title}>{title}</p>
-        <time className={styles.time}>{postedOn}</time>
+        <time className={styles.time} dateTime={postedOn.substring(0, 10)}>{postedOn.substring(0, 10)}</time>
       </div>
     </div>
   );
