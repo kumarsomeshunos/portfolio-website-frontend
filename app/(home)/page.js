@@ -5,6 +5,7 @@ import ProjectSection from "@/components/Home/ProjectSection/ProjectSection";
 import CurrentlySection from "@/components/Home/CurrentlySection/CurrentlySection";
 import Footer from "@/components/core/Footer/Footer";
 import End from "@/components/core/End/End";
+import NotificationCard from "@/components/core/NotificationCard/NotificationCard";
 
 export const metadata = {
   title: "Home | Somesh Kumar",
@@ -45,6 +46,9 @@ export default async function Home() {
 
   return (
     <main>
+      {baseData.data[0].notificationMessage && (
+        <NotificationCard message={baseData.data[0].notificationMessage} />
+      )}
       <Navbar navbarLinks={baseData.data[0].navbarLinks} />
       <Hero
         greetings={baseData.data[0].greetings}
