@@ -37,7 +37,7 @@ const Song = ({ lastfmData }) => {
               {lastfmData[0].artist} &bull; {lastfmData[0].album}
             </p>
             <p className={styles.playlist}>
-              Well, you can check my playlist on <span>Spotify</span>
+              Well, you can check my playlist on <Link href={"https://open.spotify.com/user/313bf5ghzbonjhyshndcek5s3hqa"}><span>Spotify</span></Link>
             </p>
             <MainButton
               text="▶ Listen on Spotify [WIP]"
