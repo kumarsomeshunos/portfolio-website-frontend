@@ -3,6 +3,7 @@ import Footer from "@/components/core/Footer/Footer";
 import End from "@/components/core/End/End";
 import HeaderSection from "@/components/core/HeaderSection/HeaderSection";
 import ContactSection from "@/components/Contact/ContactSection/ContactSection";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Contact | Somesh Kumar",
@@ -23,13 +24,10 @@ export default async function Contact() {
   return (
     <main>
       <Navbar navbarLinks={baseData.data[0].navbarLinks} />
-      <HeaderSection
-        heading={"CONTACT"}
-        description={
-          ""
-        }
-      />
-      <ContactSection />
+      <HeaderSection heading={"CONTACT"} description={""} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ContactSection />
+      </Suspense>
       <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.data[0].endComment} />
     </main>
