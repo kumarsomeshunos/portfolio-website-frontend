@@ -43,10 +43,10 @@ export default async function Hero({
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           ></div>
           <div className={styles.divButtons}>
-            {heroButtons.map((heroButton) => {
+            {heroButtons.map((heroButton, index) => {
               return (
                 <MainButton
-                  key={heroButton.key}
+                  key={index}
                   text={heroButton.key}
                   href={heroButton.value}
                   boxShadow={"none"}

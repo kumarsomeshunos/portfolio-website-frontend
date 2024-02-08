@@ -30,10 +30,10 @@ export default function ProjectCard({
         <p className={styles.description}>{description}</p>
         <div className={styles.divButtons}>
           {links
-            ? links.map((link) => {
+            ? links.map((link, index) => {
                 return (
                   <MainButton
-                    key={link.key}
+                    key={index}
                     text={link.key}
                     href={link.value}
                     border="none"

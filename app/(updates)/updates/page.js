@@ -13,7 +13,7 @@ export const metadata = {
 const fetchBaseData = async () => {
   const baseData = await fetch(
     "https://api.kumarsomesh.in/api/portfolio/bases",
-    { next: { revalidate: false | 0 | 1 } }
+    { next: { revalidate: 5 } }
   );
   const baseDataJson = await baseData.json();
   return baseDataJson;
@@ -22,7 +22,7 @@ const fetchBaseData = async () => {
 const fetchUpdateData = async () => {
   const updateData = await fetch(
     "https://api.kumarsomesh.in/api/portfolio/updates/",
-    { next: { revalidate: false | 0 | 1 } }
+    { next: { revalidate: 5 } }
   );
   const updateDataJson = await updateData.json();
   return updateDataJson;

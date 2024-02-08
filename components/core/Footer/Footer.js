@@ -21,9 +21,9 @@ export default function Footer({ socialLinks }) {
           backgroundColor={"transparent"}
         />
         <div className={styles.icons}>
-          {socialLinks.map((socialLink) => {
+          {socialLinks.map((socialLink, index) => {
             return (
-              <Link href={socialLink.value}>
+              <Link href={socialLink.value} key={index}>
                 <Image
                   src={
                     socialLink.key ||

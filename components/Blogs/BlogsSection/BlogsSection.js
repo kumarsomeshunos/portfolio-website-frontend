@@ -3,7 +3,7 @@ import MainCard from "@/components/core/MainCard/MainCard";
 import BlogCard from "@/components/core/BlogCard/BlogCard";
 
 export default function BlogSection({ blogs }) {
-  let random = Math.floor(Math.random() * 1) + 1;
+  let random = Math.floor(Math.random() * blogs.length);
   return (
     <section
       className={styles.main}
@@ -14,12 +14,21 @@ export default function BlogSection({ blogs }) {
     >
       <div className={`${styles.container} ${styles.wrapper}`}>
         <h2 className={styles.heading}>Featured Blog</h2>
-        <MainCard thumbnail={blogs[0].featuredThumbnail ? blogs[0].featuredThumbnail : blogs[0].thumbnail} title={blogs[0].title} postedOn={blogs[0].postedOn} />
+        <MainCard
+          thumbnail={
+            blogs[random].featuredThumbnail
+              ? blogs[random].featuredThumbnail
+              : blogs[random].thumbnail
+          }
+          title={blogs[random].title}
+          postedOn={blogs[random].postedOn}
+        />
         <h2 className={styles.heading}>All Blogs</h2>
         <div className={styles.divProjects}>
-          {blogs.map((blog) => {
+          {blogs.map((blog, index) => {
             return (
               <BlogCard
+              key={index}
                 thumbnail={blog.thumbnail}
                 title={blog.title}
                 postedOn={blog.postedOn}

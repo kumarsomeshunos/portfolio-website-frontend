@@ -19,40 +19,46 @@ export default function BlogSection({
     >
       <HeaderSection
         heading={sectionTwoHeading.toUpperCase()}
-        description={
-          sectionTwoSubHeading
-        }
+        description={sectionTwoSubHeading}
         backgroundColor={"transparent"}
       />
-      {/* <p className={styles.subHeading}>{sectionTwoSubHeading}</p> */}
-      <div className={`${styles.container} ${styles.wrapper}`}>
-        <div className={styles.divCards}>
-          {blogs.map((blog) => {
-            return (
-              <BlogCard
-                thumbnail={blog.thumbnail}
-                title={blog.title}
-                postedOn={blog.postedOn}
-                tags={blog.tags}
-                description={blog.description}
-              />
-            );
-          })}
+      {blogs ? (
+        <div className={`${styles.container} ${styles.wrapper}`}>
+          <div className={styles.divCards}>
+            {blogs.map((blog, index) => {
+              return (
+                <BlogCard
+                key={index}
+                  thumbnail={blog.thumbnail}
+                  title={blog.title}
+                  postedOn={blog.postedOn}
+                  tags={blog.tags}
+                  description={blog.description}
+                />
+              );
+            })}
+          </div>
+          <div className={styles.divButtons}>
+            {sectionTwoButtons.map((sectionTwoButton, index) => {
+              return (
+                <MainButton
+                key={index}
+                  text={sectionTwoButton.key}
+                  href={sectionTwoButton.value}
+                  boxShadow={"none"}
+                  border={"2px solid #1A9FEA"}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className={styles.divButtons}>
-          {sectionTwoButtons.map((sectionTwoButton) => {
-            return (
-              <MainButton
-                key={sectionTwoButton.key}
-                text={sectionTwoButton.key}
-                href={sectionTwoButton.value}
-                boxShadow={"none"}
-                border={"2px solid #1A9FEA"}
-              />
-            );
-          })}
-        </div>
-      </div>
+      ) : (
+        <HeaderSection
+          heading={"".toUpperCase()}
+          description={"No blogs available 😔."}
+          backgroundColor={"transparent"}
+        />
+      )}
     </section>
   );
 }

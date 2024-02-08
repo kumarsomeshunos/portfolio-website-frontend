@@ -22,7 +22,7 @@ const fetchBaseData = async () => {
 const fetchBlogData = async () => {
   const blogData = await fetch(
     "https://api.kumarsomesh.in/api/portfolio/blogs",
-    { next: { revalidate: false | 0 | 1 } }
+    { next: { revalidate: 5 } }
   );
   const blogDataJson = await blogData.json();
   return blogDataJson;

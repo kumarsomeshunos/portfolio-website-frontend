@@ -30,9 +30,9 @@ export default function BlogCard({
           </time>
         </div>
         <div className={styles.tags}>
-          {tags.map((tag) => {
+          {tags.map((tag, index) => {
             return (
-              <span className={styles.tag} key={tag.key}>
+              <span className={styles.tag} key={index}>
                 {tag.key}
               </span>
             );
@@ -40,9 +40,6 @@ export default function BlogCard({
         </div>
         <p className={styles.description}>{description}</p>
         <MainButton
-          key={
-            Math.random().toString(36).substring(7) + Date.now().toString(36)
-          }
           text={"Read More [WIP]"}
           border="none"
           boxShadow="none"

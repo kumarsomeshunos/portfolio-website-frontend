@@ -26,10 +26,10 @@ export default function ProjectSection({
       />
       <div className={`${styles.container} ${styles.wrapper}`}>
         <div className={styles.divCards}>
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             return (
               <ProjectCard
-                key={project.title}
+                key={index}
                 src={project.thumbnail}
                 title={project.title}
                 postedOn={project.postedOn}
@@ -42,10 +42,10 @@ export default function ProjectSection({
           })}
         </div>
         <div className={styles.divButtons}>
-          {sectionOneButtons.map((sectionOneButton) => {
+          {sectionOneButtons.map((sectionOneButton, index) => {
             return (
               <MainButton
-                key={sectionOneButton.key}
+                key={index}
                 text={sectionOneButton.key}
                 href={sectionOneButton.value}
                 margin={"0"}

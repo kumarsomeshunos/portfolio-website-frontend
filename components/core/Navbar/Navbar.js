@@ -23,9 +23,9 @@ export default function Navbar({ navbarLinks }) {
           </span>
         </span>
         <ul className={styles.ul}>
-          {navbarLinks.map((navbarLink) => {
+          {navbarLinks.map((navbarLink, index) => {
             return (
-              <li key={navbarLink.key} className={styles.li}>
+              <li key={index} className={styles.li}>
                 <Link href={navbarLink.value}>{navbarLink.key}</Link>
               </li>
             );

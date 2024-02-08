@@ -4,7 +4,7 @@ import HeaderSection from "@/components/core/HeaderSection/HeaderSection";
 import ProjectCard from "@/components/core/ProjectCard/ProjectCard";
 
 export default function ProjectSection({ projects }) {
-  let random = Math.floor(Math.random() * 1) + 1;
+  let random = Math.floor(Math.random() * projects.length);
   return (
     <section
       className={styles.main}
@@ -13,14 +13,23 @@ export default function ProjectSection({ projects }) {
       //         "url('https://wallpapers.com/images/hd/dark-background-b59iy2towqy5yrgb.jpg')",
       //     }}
     >
-      <div className={`${styles.container} ${styles.wrapper}`}>
+      {projects ? (<div className={`${styles.container} ${styles.wrapper}`}>
         <h2 className={styles.heading}>Featured Project</h2>
-        <MainCard thumbnail={projects[0].featuredThumbnail ? projects[0].featuredThumbnail : projects[0].thumbnail} title={projects[0].title} postedOn={projects[0].postedOn} />
+        <MainCard
+          thumbnail={
+            projects[random].featuredThumbnail
+              ? projects[random].featuredThumbnail
+              : projects[random].thumbnail
+          }
+          title={projects[random].title}
+          postedOn={projects[random].postedOn}
+        />
         <h2 className={styles.heading}>All Projects</h2>
         <div className={styles.divProjects}>
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             return (
               <ProjectCard
+                key={index}
                 src={project.thumbnail}
                 title={project.title}
                 postedOn={project.postedOn}
@@ -32,7 +41,11 @@ export default function ProjectSection({ projects }) {
             );
           })}
         </div>
-      </div>
+      </div>) : (<HeaderSection
+          heading={"".toUpperCase()}
+          description={"No projects available 😔."}
+          backgroundColor={"transparent"}
+        />)}
     </section>
   );
 }
