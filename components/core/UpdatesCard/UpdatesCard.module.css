@@ -25,6 +25,25 @@
     line-height: var(--para-line-height);
 }
 
+.dangerousMD h1 {
+    font-size: 170%;
+    margin: 1rem 0;
+}
+
+.dangerousMD h2 {
+    font-size: 150%;
+    margin: 0.5rem 0;
+}
+
+.dangerousMD h3 {
+    font-size: 130%;
+    margin: 0.5rem 0;
+}
+
+.dangerousMD ul {
+    margin: 0 0 0 2rem;
+}
+
 .dangerousMD p {
     margin: 0 0 1rem 0;
 }

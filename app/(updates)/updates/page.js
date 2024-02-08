@@ -40,7 +40,7 @@ export default async function Updates() {
           ""
         }
       />
-      <UpdatesSection title={updateData.data[0].title} postedOn={updateData.data[0].postedOn} version={updateData.data[0].version} descriptionMD={updateData.data[0].descriptionMD} />
+      <UpdatesSection data={updateData.data} title={updateData.data[0].title} postedOn={updateData.data[0].postedOn} version={updateData.data[0].version} descriptionMD={updateData.data[0].descriptionMD} />
       <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.data[0].endComment} />
     </main>
