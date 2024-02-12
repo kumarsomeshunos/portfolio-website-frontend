@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Roboto_Condensed } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google'
 const robotocondensed = Roboto_Condensed({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -13,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={robotocondensed.className}>{children}</body>
+      <body className={robotocondensed.className}>
+      <GoogleAnalytics gaId="G-JB8RBQF4MR" />
+      {children}</body>
     </html>
   );
 }

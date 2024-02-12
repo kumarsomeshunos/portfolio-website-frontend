@@ -47,15 +47,15 @@ export default function ContactSection() {
               </label>
               <textarea id="message" name="message"></textarea>
             </div>
-            <button type="submit">Send Message [ BETA ]</button>
-            <MainButton
+            <button className={styles.button} type="submit">Send Message</button>
+            {/* <MainButton
               // key={sectionOneButton.key}
               text={"Send Message [ ALPHA ]"}
               href={"https://api.kumarsomesh.in/api/portfolio/contact"}
               margin={"0"}
               boxShadow={"none"}
               border={"2px solid #1A9FEA"}
-            />
+            /> */}
           </form>
         </section>
       </div>

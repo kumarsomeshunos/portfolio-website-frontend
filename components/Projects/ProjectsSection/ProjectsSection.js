@@ -19,7 +19,7 @@ export default function ProjectSection({ projects }) {
           thumbnail={
             projects[random].featuredThumbnail
               ? projects[random].featuredThumbnail
-              : projects[random].thumbnail
+              : projects[random].thumbnail ? projects[random].thumbnail : "https://images.prismic.io/miscellaneous/7bc1b706-a940-4da2-ac56-3bcd5bc3d84c_backup-image.jpg"
           }
           title={projects[random].title}
           postedOn={projects[random].postedOn}
