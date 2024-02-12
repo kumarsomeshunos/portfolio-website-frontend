@@ -5,7 +5,7 @@ import End from "@/components/core/End/End";
 import HeaderSection from "@/components/core/HeaderSection/HeaderSection";
 
 export const metadata = {
-  title: "Home | Somesh Kumar",
+  title: "Projects | Somesh Kumar",
   description: "Projects Page for Portfolio website of Somesh Kumar",
 };
 
