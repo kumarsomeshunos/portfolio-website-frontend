@@ -2,6 +2,8 @@ import "./globals.css";
 import { Roboto_Condensed } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+
 const robotocondensed = Roboto_Condensed({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -18,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={robotocondensed.className}>
         <GoogleAnalytics gaId="G-JB8RBQF4MR" />
         {children}
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
