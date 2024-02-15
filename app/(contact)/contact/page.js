@@ -24,7 +24,7 @@ export default async function Contact() {
   return (
     <main>
       <Navbar navbarLinks={baseData.data[0].navbarLinks} />
-      <HeaderSection heading={"CONTACT"} description={""} />
+      <HeaderSection heading={"CONTACT"} description={"To maintain anonymity, kindly refrain from filling out the Name and Email fields before sending your message!"} />
       <Suspense fallback={<div>Loading...</div>}>
         <ContactSection />
       </Suspense>
