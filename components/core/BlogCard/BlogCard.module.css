@@ -1,6 +1,6 @@
 .main {
     break-inside: avoid;
-    margin: 1rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 1rem 0rem;
     color: var(--main-text-color);
     background-color: var(--card-background-color);
     padding: 1rem;
