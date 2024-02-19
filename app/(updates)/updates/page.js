@@ -21,7 +21,7 @@ const fetchBaseData = async () => {
 
 const fetchUpdateData = async () => {
   const updateData = await fetch(
-    "https://api.kumarsomesh.in/api/portfolio/updates/",
+    "https://api.kumarsomesh.in/api/portfolio/updates?sortByDate=des",
     { next: { revalidate: 5 } }
   );
   const updateDataJson = await updateData.json();

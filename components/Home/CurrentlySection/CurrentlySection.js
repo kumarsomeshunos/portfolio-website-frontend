@@ -13,6 +13,8 @@ export default function CurrentlySection({ lastfmData, plexData }) {
     } else {
       return <Movie plexData={plexData} />;
     }
+  } else if (lastfmData[0]["@attr"]) {
+    return <Song lastfmData={lastfmData} />;
   } else {
     return Math.random() < 0.5 ? (
       plexData.librarySectionTitle == "TV Shows" ? (

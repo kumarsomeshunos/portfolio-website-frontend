@@ -14,7 +14,7 @@ function convertSecondsToTime(milliseconds) {
 const Movie = ({ plexData }) => {
   return (
     <section className={styles.sectionMain}>
-    {/* <HeaderSection
+      {/* <HeaderSection
         heading={"PROJECTS"}
         description={
           "These are some projects made with love by me. -- Somesh Kumar"
@@ -101,10 +101,18 @@ const Movie = ({ plexData }) => {
           <div className={styles.sectionTwoInfo}>
             <p className={styles.dailyMuse}>Wanna see more of my daily muse?</p>
             <p className={styles.otherLinks}>
-              Recently read <Link href={"/"}><span>Books</span></Link> 📚 [WIP]
+              Recently read{" "}
+              <Link href={"/"}>
+                <span>Books</span>
+              </Link>{" "}
+              📚 [WIP]
             </p>
             <p className={styles.otherLinks}>
-              Recently watched <Link href={"/"}><span>TV Show</span></Link> 🎬 [WIP]
+              Recently watched{" "}
+              <Link href={"/"}>
+                <span>TV Show</span>
+              </Link>{" "}
+              🎬 [WIP]
             </p>
           </div>
         </div>

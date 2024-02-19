@@ -31,7 +31,7 @@ const Song = ({ lastfmData }) => {
             alt="Poster"
           />
           <div className={styles.sectionInfo}>
-            <p className={styles.last}>Last listened to: </p>
+            <p className={styles.last}>{lastfmData[0]["@attr"] ? "Currently listening to: " : "Last listened to: "}</p>
             <p className={styles.name}>{lastfmData[0].name}</p>
             <p className={styles.album}>
               {lastfmData[0].artist} &bull; {lastfmData[0].album}
