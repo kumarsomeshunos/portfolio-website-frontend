@@ -11,42 +11,44 @@ export default function BlogCard({
 }) {
   return (
     <article className={styles.main}>
-      {thumbnail ? (
-        <div className={styles.image}>
-          <Image
-            src={thumbnail}
-            width={200}
-            height={200}
-            alt="Blog Thumbnail"
+      <div className={styles.safariFixDiv}>
+        {thumbnail ? (
+          <div className={styles.image}>
+            <Image
+              src={thumbnail}
+              width={200}
+              height={200}
+              alt="Blog Thumbnail"
+            />
+          </div>
+        ) : null}
+        <div className={styles.divInfo}>
+          <h3 className={styles.title}>{title}</h3>
+          <hr />
+          <div className={styles.divTime}>
+            <time className={styles.time} dateTime={postedOn.substring(0, 10)}>
+              {postedOn.substring(0, 10)}
+            </time>
+          </div>
+          <div className={styles.tags}>
+            {tags.map((tag, index) => {
+              return (
+                <span className={styles.tag} key={index}>
+                  {tag.key}
+                </span>
+              );
+            })}
+          </div>
+          <p className={styles.description}>{description}</p>
+          <MainButton
+            text={"Read More [WIP]"}
+            border="none"
+            boxShadow="none"
+            margin="0 0.5rem 0.5rem 0"
+            padding="0.3rem 0.8rem"
+            borderRadius="10px"
           />
         </div>
-      ) : null}
-      <div className={styles.divInfo}>
-        <h3 className={styles.title}>{title}</h3>
-        <hr />
-        <div className={styles.divTime}>
-          <time className={styles.time} dateTime={postedOn.substring(0, 10)}>
-            {postedOn.substring(0, 10)}
-          </time>
-        </div>
-        <div className={styles.tags}>
-          {tags.map((tag, index) => {
-            return (
-              <span className={styles.tag} key={index}>
-                {tag.key}
-              </span>
-            );
-          })}
-        </div>
-        <p className={styles.description}>{description}</p>
-        <MainButton
-          text={"Read More [WIP]"}
-          border="none"
-          boxShadow="none"
-          margin="0 0.5rem 0.5rem 0"
-          padding="0.3rem 0.8rem"
-          borderRadius="10px"
-        />
       </div>
     </article>
   );

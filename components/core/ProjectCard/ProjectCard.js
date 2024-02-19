@@ -13,46 +13,53 @@ export default function ProjectCard({
 }) {
   return (
     <article className={styles.main}>
-      <div className={styles.wrapper}>
-        <h3 className={styles.title}>{title}</h3>
-        <hr />
-        <div className={styles.divInfo}>
-          <time className={styles.time} dateTime={postedOn.substring(0, 10)}>
-            {postedOn.substring(0, 10)}
-          </time>
-          {status.toLowerCase() == "completed" ? (
-            <span className={styles.statusGreen}>{status}</span>
+      <div className={styles.safariFixDiv}>
+        <div className={styles.wrapper}>
+          <h3 className={styles.title}>{title}</h3>
+          <hr />
+          <div className={styles.divInfo}>
+            <time className={styles.time} dateTime={postedOn.substring(0, 10)}>
+              {postedOn.substring(0, 10)}
+            </time>
+            {status.toLowerCase() == "completed" ? (
+              <span className={styles.statusGreen}>{status}</span>
+            ) : (
+              <span className={styles.statusRed}>{status}</span>
+            )}
+          </div>
+          <h4 className={styles.subtitle}>{subtitle}</h4>
+          <p className={styles.description}>{description}</p>
+          <div className={styles.divButtons}>
+            {links
+              ? links.map((link, index) => {
+                  return (
+                    <MainButton
+                      key={index}
+                      text={link.key}
+                      href={link.value}
+                      border="none"
+                      boxShadow="none"
+                      margin="0 0.5rem 0.5rem 0"
+                      padding="0.3rem 0.8rem"
+                      borderRadius="10px"
+                    />
+                  );
+                })
+              : null}
+          </div>
+          {src ? (
+            <div className={styles.image}>
+              <Image
+                src={src}
+                width={400}
+                height={200}
+                alt="Project Thumbnail"
+              />
+            </div>
           ) : (
-            <span className={styles.statusRed}>{status}</span>
+            <div className={styles.remover}></div>
           )}
         </div>
-        <h4 className={styles.subtitle}>{subtitle}</h4>
-        <p className={styles.description}>{description}</p>
-        <div className={styles.divButtons}>
-          {links
-            ? links.map((link, index) => {
-                return (
-                  <MainButton
-                    key={index}
-                    text={link.key}
-                    href={link.value}
-                    border="none"
-                    boxShadow="none"
-                    margin="0 0.5rem 0.5rem 0"
-                    padding="0.3rem 0.8rem"
-                    borderRadius="10px"
-                  />
-                );
-              })
-            : null}
-        </div>
-        {src ? (
-          <div className={styles.image}>
-            <Image src={src} width={400} height={200} alt="Project Thumbnail" />
-          </div>
-        ) : (
-          <div className={styles.remover}></div>
-        )}
       </div>
     </article>
   );

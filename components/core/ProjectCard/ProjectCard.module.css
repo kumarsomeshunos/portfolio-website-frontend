@@ -1,15 +1,18 @@
 .main {
+    break-inside: avoid;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+.safariFixDiv {
     width: 100%;
     border-radius: 10px;
     color: var(--main-text-color);
     background-color: var(--card-background-color);
     transition: all 0.5s ease-in-out;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    break-inside: avoid;
-    margin: 0 1rem 1rem 0rem;
 }
 
-.main:hover {
+.safariFixDiv:hover {
     box-shadow: var(--card-box-shadow);
     border: 1px solid rgba(255, 255, 255, 1);
     transform: translateY(-0.2rem);
