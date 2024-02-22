@@ -1,8 +1,13 @@
 import Song from "./Song/Song";
 import Movie from "./Movie/Movie";
 import TV from "./TV/TV";
+import Book from "./Book/Book";
 
-export default function CurrentlySection({ lastfmData, plexData }) {
+export default function CurrentlySection({
+  lastfmData,
+  plexData,
+  googlebooksData,
+}) {
   if (
     plexData.Player.state == "playing" ||
     plexData.Player.state == "paused" ||
@@ -16,14 +21,26 @@ export default function CurrentlySection({ lastfmData, plexData }) {
   } else if (lastfmData[0]["@attr"]) {
     return <Song lastfmData={lastfmData} />;
   } else {
-    return Math.random() < 0.5 ? (
-      plexData.librarySectionTitle == "TV Shows" ? (
+    let randomNum = Math.random();
+    if (randomNum < 0.2) {
+      return plexData.librarySectionTitle == "TV Shows" ? (
         <TV plexData={plexData} />
       ) : (
         <Movie plexData={plexData} />
-      )
-    ) : (
-      <Song lastfmData={lastfmData} />
-    );
+      );
+    } else if (randomNum < 0.4) {
+      return <Song lastfmData={lastfmData} />;
+    } else {
+      return <Book googlebooksData={googlebooksData} />;
+    }
+    // return Math.random() < 0.5 ? (
+    //   plexData.librarySectionTitle == "TV Shows" ? (
+    //     <TV plexData={plexData} />
+    //   ) : (
+    //     <Movie plexData={plexData} />
+    //   )
+    // ) : (
+    //   <Song lastfmData={lastfmData} />
+    // );
   }
 }

@@ -72,6 +72,7 @@ export default async function Home() {
       <CurrentlySection
         lastfmData={baseData.lastfmData}
         plexData={baseData.plexData}
+        googlebooksData={baseData.googlebooksData}
       />
       <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.data[0].endComment} />
