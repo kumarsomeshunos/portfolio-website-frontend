@@ -7,7 +7,7 @@ import Link from "next/link";
 const Song = ({ lastfmData }) => {
   return (
     <section className={styles.sectionMain}>
-      <Image src={lastfmData[0].image} width={400} height={200} alt="Poster" />
+      <Image src={lastfmData.lastfmData[0].image} width={400} height={200} alt="Poster" />
       <div className={`${styles.container} ${styles.sectionWrapper}`}>
         {/* <svg
           className={styles.ribbion}
@@ -25,22 +25,23 @@ const Song = ({ lastfmData }) => {
         {/* <p className={styles.ribbonText}>🎵</p> */}
         <div className={styles.sectionPartOne}>
           <Image
-            src={lastfmData[0].image}
+            src={lastfmData.lastfmData[0].image}
             width={200}
             height={200}
             alt="Poster"
           />
           <div className={styles.sectionInfo}>
-            <p className={styles.last}>{lastfmData[0]["@attr"] ? "Currently listening to: " : "Last listened to: "}</p>
-            <p className={styles.name}>{lastfmData[0].name}</p>
+            <p className={styles.last}>{lastfmData.lastfmData[0]["@attr"] ? "Currently listening to: " : "Last listened to: "}</p>
+            <p className={styles.name}>{lastfmData.lastfmData[0].name}</p>
             <p className={styles.album}>
-              {lastfmData[0].artist} &bull; {lastfmData[0].album}
+              {lastfmData.lastfmData[0].artist} &bull; {lastfmData.lastfmData[0].album}
             </p>
             <p className={styles.playlist}>
               Well, you can check my playlist on <Link href={"https://open.spotify.com/user/313bf5ghzbonjhyshndcek5s3hqa"}><span>Spotify</span></Link>
             </p>
             <MainButton
-              text="▶ Listen on Spotify [WIP]"
+              text="▶ Listen on Spotify"
+              href={lastfmData.spotifyData.external_url}
               border="2px solid green"
               backgroundColor="transparent"
               color="black"
@@ -49,6 +50,7 @@ const Song = ({ lastfmData }) => {
               padding="0.2rem 1rem"
               borderRadius="0.5rem"
             />
+             {/* <audio className={styles.audio} src={lastfmData.spotifyData.preview_url} controls /> */}
           </div>
         </div>
         <div className={styles.sectionPartTwo}>
