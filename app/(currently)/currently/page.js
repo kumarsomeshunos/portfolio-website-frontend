@@ -4,10 +4,11 @@ import End from "@/components/core/End/End";
 import HeaderSection from "@/components/core/HeaderSection/HeaderSection";
 import ContactSection from "@/components/Contact/ContactSection/ContactSection";
 import { Suspense } from "react";
+import SongsSection from "@/components/Currently/SongsSection/SongsSection";
 
 export const metadata = {
-  title: "Contact | Somesh Kumar",
-  description: "Contact Page for Portfolio website of Somesh Kumar",
+  title: "Currently | Somesh Kumar",
+  description: "Currently Page for Portfolio website of Somesh Kumar",
 };
 
 const fetchBaseData = async () => {
@@ -19,15 +20,15 @@ const fetchBaseData = async () => {
   return baseDataJson;
 };
 
-export default async function Contact() {
+export default async function Currently() {
   const baseData = await fetchBaseData();
   return (
     <main>
       <Navbar navbarLinks={baseData.data[0].navbarLinks} />
-      <HeaderSection heading={"CONTACT"} description={"To maintain anonymity, kindly refrain from filling out the Name and Email fields before sending your message!"} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <ContactSection />
-      </Suspense>
+      <HeaderSection heading={"SONGS"} description={"Songs I've been currently listening"} />
+      <SongsSection lastfmData={baseData.lastfmData} />
+      {/* <HeaderSection heading={"MOVIES & TV SHOWS"} description={"Movies I've been currently watching"} />
+      <HeaderSection heading={"BOOKS"} description={"Books I've been currently reading"} /> */}
       <Footer socialLinks={baseData.data[0].socialLinks} />
       <End endComment={baseData.quote.randomQuoteData} />
     </main>

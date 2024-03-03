@@ -46,7 +46,7 @@ export default async function Projects() {
         projects={projectData.data}
       />
       <Footer socialLinks={baseData.data[0].socialLinks} />
-      <End endComment={baseData.data[0].endComment} />
+      <End endComment={baseData.quote.randomQuoteData} />
     </main>
   );
 }

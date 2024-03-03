@@ -75,7 +75,8 @@ export default async function Home() {
         googlebooksData={baseData.googlebooksData}
       />
       <Footer socialLinks={baseData.data[0].socialLinks} />
-      <End endComment={baseData.data[0].endComment} />
+      <End endComment={baseData.quote.randomQuoteData} />
+      {/* <End endComment={baseData.data[0].endComment} /> */}
     </main>
   );
 }

@@ -47,7 +47,7 @@ export default async function Blogs() {
         blogs={blogData.data}
       />
       <Footer socialLinks={baseData.data[0].socialLinks} />
-      <End endComment={baseData.data[0].endComment} />
+      <End endComment={baseData.quote.randomQuoteData} />
     </main>
   );
 }
