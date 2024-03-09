@@ -21,26 +21,26 @@ export default function CurrentlySection({
   } else if (lastfmData.lastfmData[0]["@attr"]) {
     return <Song lastfmData={lastfmData} />;
   } else {
-    // let randomNum = Math.random();
-    // if (randomNum < 0.2) {
-    //   return plexData.librarySectionTitle == "TV Shows" ? (
-    //     <TV plexData={plexData} />
-    //   ) : (
-    //     <Movie plexData={plexData} />
-    //   );
-    // } else if (randomNum < 0.4) {
-    //   return <Song lastfmData={lastfmData} />;
-    // } else {
-    //   return <Book googlebooksData={googlebooksData} />;
-    // }
-    return Math.random() < 0.5 ? (
-      plexData.librarySectionTitle == "TV Shows" ? (
+    let randomNum = Math.random();
+    if (randomNum < 0.3) {
+      return plexData.librarySectionTitle == "TV Shows" ? (
         <TV plexData={plexData} />
       ) : (
         <Movie plexData={plexData} />
-      )
-    ) : (
-      <Song lastfmData={lastfmData} />
-    );
+      );
+    } else if (randomNum < 0.6) {
+      return <Song lastfmData={lastfmData} />;
+    } else {
+      return <Book googlebooksData={googlebooksData} />;
+    }
+    // return Math.random() < 0.5 ? (
+    //   plexData.librarySectionTitle == "TV Shows" ? (
+    //     <TV plexData={plexData} />
+    //   ) : (
+    //     <Movie plexData={plexData} />
+    //   )
+    // ) : (
+    //   <Song lastfmData={lastfmData} />
+    // );
   }
 }
