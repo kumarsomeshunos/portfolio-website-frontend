@@ -10,6 +10,8 @@ export default function ProjectCard({
   description,
   links,
   src,
+  slug,
+  details
 }) {
   return (
     <article className={styles.main}>
@@ -46,6 +48,16 @@ export default function ProjectCard({
                   );
                 })
               : null}
+              {details ? <MainButton
+                      key={99}
+                      text={"Read More"}
+                      href={`project/${slug}`}
+                      border="none"
+                      boxShadow="none"
+                      margin="0 0.5rem 0.5rem 0"
+                      padding="0.3rem 0.8rem"
+                      borderRadius="10px"
+                    /> : null}
           </div>
           {src ? (
             <div className={styles.image}>

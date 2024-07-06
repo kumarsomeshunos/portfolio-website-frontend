@@ -27,6 +27,7 @@ export default function ProjectSection({
       <div className={`${styles.container} ${styles.wrapper}`}>
         <div className={styles.divCards}>
           {projects.map((project, index) => {
+            console.log(project.slug)
             return (
               <ProjectCard
                 key={index}
@@ -37,6 +38,8 @@ export default function ProjectSection({
                 subtitle={project.subtitle}
                 description={project.description}
                 links={project.links}
+                slug={project.slug}
+                details={project.details}
               />
             );
           })}

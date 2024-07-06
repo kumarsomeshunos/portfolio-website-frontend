@@ -34,6 +34,7 @@ export default function BlogSection({
                   postedOn={blog.postedOn}
                   tags={blog.tags}
                   description={blog.description}
+                  slug={blog.slug}
                 />
               );
             })}

@@ -12,7 +12,7 @@ export const metadata = {
 
 const fetchBaseData = async () => {
   const baseData = await fetch(
-    "https://api.kumarsomesh.in/api/portfolio/bases",
+    "http://home.kumarsomesh.in:3000/api/portfolio/bases",
     { next: { revalidate: 5 } }
   );
   const baseDataJson = await baseData.json();

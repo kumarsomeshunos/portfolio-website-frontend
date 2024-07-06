@@ -1,0 +1,7 @@
+.main {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

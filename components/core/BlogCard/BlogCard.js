@@ -8,6 +8,7 @@ export default function BlogCard({
   postedOn,
   tags,
   description,
+  slug,
 }) {
   return (
     <article className={styles.main}>
@@ -40,7 +41,8 @@ export default function BlogCard({
         </div>
         <p className={styles.description}>{description}</p>
         <MainButton
-          text={"Read More [WIP]"}
+          href={`blog/${slug}`}
+          text={"Read More [BETA]"}
           border="none"
           boxShadow="none"
           margin="0 0.5rem 0.5rem 0"

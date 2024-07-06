@@ -37,6 +37,8 @@ export default function ProjectSection({ projects }) {
                 subtitle={project.subtitle}
                 description={project.description}
                 links={project.links}
+                slug={project.slug}
+                details={project.details}
               />
             );
           })}

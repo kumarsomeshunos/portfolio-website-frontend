@@ -28,7 +28,8 @@ export default function BlogSection({ blogs }) {
           {blogs.map((blog, index) => {
             return (
               <BlogCard
-              key={index}
+                key={index}
+                slug={blog.slug}
                 thumbnail={blog.thumbnail}
                 title={blog.title}
                 postedOn={blog.postedOn}

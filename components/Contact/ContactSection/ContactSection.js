@@ -26,7 +26,7 @@ export default function ContactSection() {
         <section className={styles.sectionWrapper}>
           <form
             className={styles.form}
-            action="https://api.kumarsomesh.in/api/portfolio/contact"
+            action="http://home.kumarsomesh.in:3000/api/portfolio/contact"
             method="POST"
           >
             <div className={styles.formGroup}>
@@ -51,7 +51,7 @@ export default function ContactSection() {
             {/* <MainButton
               // key={sectionOneButton.key}
               text={"Send Message [ ALPHA ]"}
-              href={"https://api.kumarsomesh.in/api/portfolio/contact"}
+              href={"http://home.kumarsomesh.in:3000/api/portfolio/contact"}
               margin={"0"}
               boxShadow={"none"}
               border={"2px solid #1A9FEA"}

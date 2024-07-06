@@ -1,0 +1,89 @@
+.main {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.container img {
+    border-radius: 10px;
+    box-shadow: var(--image-box-shadow);
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 85%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1150px;
+    }
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    box-shadow: var(--image-box-shadow);
+    border-radius: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0.5rem 0;
+}
+
+.tag {
+    background-color: #434343;
+    color: white;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.1rem;
+    box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.divTime {
+    margin: 1rem 0;
+}
+
+.time {
+    color: #9C9C9C;
+}

@@ -12,7 +12,7 @@ export const metadata = {
 
 const fetchBaseData = async () => {
   const baseData = await fetch(
-    "https://api.kumarsomesh.in/api/portfolio/bases",
+    "http://home.kumarsomesh.in:3000/api/portfolio/bases",
     { next: { revalidate: 5 } }
   );
   const baseDataJson = await baseData.json();
@@ -21,7 +21,7 @@ const fetchBaseData = async () => {
 
 const fetchUpdateData = async () => {
   const updateData = await fetch(
-    "https://api.kumarsomesh.in/api/portfolio/updates?sortByDate=des",
+    "http://home.kumarsomesh.in:3000/api/portfolio/updates?sortByDate=des",
     { next: { revalidate: 5 } }
   );
   const updateDataJson = await updateData.json();

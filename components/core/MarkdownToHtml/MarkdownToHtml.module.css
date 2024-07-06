@@ -1,0 +1,153 @@
+.containerMD {
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+.containerMD * {
+    line-height: 1.5;
+}
+
+@media (max-width: 575px) {
+    .containerMD {
+        max-width: 85%
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .containerMD {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .containerMD {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .containerMD {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .containerMD {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .containerMD {
+        max-width: 720px;
+    }
+}
+
+.containerMD th,
+.containerMD td {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--main-text-color);
+}
+
+.containerMD thead {
+    background-color: #434343;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.containerMD table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.containerMD img {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: var(--image-box-shadow);
+}
+
+.containerMD pre>code {
+    font-family: Consolas, monospace;
+    /* color: wheat; */
+    background-color: rgba(31, 31, 31, 0.85);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: block;
+    margin: 1rem 0;
+    line-height: 1.5;
+    overflow-x: scroll;
+}
+
+.containerMD code {
+    font-family: Consolas, monospace;
+    /* color: wheat; */
+    background-color: rgba(31, 31, 31, 0.85);
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+.containerMD h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.containerMD h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.containerMD h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.containerMD h4 {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.containerMD h5 {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.containerMD h6 {
+    font-size: 0.875rem;
+    margin: 1rem 0;
+}
+
+.containerMD p {
+    margin: 1rem 0;
+}
+
+.containerMD ul {
+    margin: 1rem 0;
+}
+
+.containerMD ol {
+    margin: 1rem 0;
+}
+
+.containerMD li {
+    margin: 0.5rem 0;
+}
+
+.containerMD hr {
+    margin: 1rem 0;
+}
+
+.containerMD blockquote {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: rgba(31, 31, 31, 0.85);
+    border-left: 5px solid var(--main-text-color);
+}
+
+.containerMD strong {
+    font-weight: bold;
+}
+
+.containerMD em {
+    font-style: italic;
+}

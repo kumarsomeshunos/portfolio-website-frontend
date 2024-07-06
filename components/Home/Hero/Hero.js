@@ -58,8 +58,8 @@ export default async function Hero({
         </section>
         <Image
           src={displayProfile}
-          width={400}
-          height={400}
+          width={1400}
+          height={1400}
           alt="Profile Picture"
           className={styles.image}
         />

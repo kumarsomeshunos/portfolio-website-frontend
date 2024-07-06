@@ -1,0 +1,165 @@
+.main {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin: 3rem auto;
+    max-width: 1200px;
+}
+
+.container img {
+    border-radius: 10px;
+    box-shadow: var(--image-box-shadow);
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 85%;
+    }
+
+    .leftAndRight {
+        flex-wrap: wrap;
+    }
+
+    .rightPortion {
+        margin-left: 0 !important;
+    }
+    
+    .rightPortion img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1150px;
+    }
+}
+
+.rightPortion {
+    width: auto;
+}
+
+.rightPortion img {
+    object-fit: cover;
+    width: auto;
+    height: 20rem;
+    box-shadow: var(--image-box-shadow);
+    border-radius: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0.5rem 0;
+}
+
+.tag {
+    background-color: #434343;
+    color: white;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.1rem;
+    box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.divTime {
+    margin: 1rem 0;
+}
+
+.time, .version {
+    color: #9C9C9C;
+}
+
+.leftAndRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftPortion {
+    flex-grow: 1;
+}
+
+.rightPortion {
+    margin-left: 2rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 300%;
+    font-weight: 600;
+    padding: 1rem 0;
+    margin: auto;
+    display: inline-block;
+}
+
+.subheading {
+    text-align: center;
+    font-size: 150%;
+    font-weight: 600;
+    padding: 1rem 0;
+    margin: auto;
+    display: inline-block;
+}
+
+.description {
+    padding: 0 0 2rem 0;
+    line-height: var(--para-line-height);
+    text-align: justify;
+}
+
+.divButtons {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.divInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.statusGreen {
+    color: #0F0;
+}
+
+.statusRed {
+    color: orange;
+}
+
+.statusYellow {
+    color: yellow;
+}
